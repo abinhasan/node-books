@@ -1,0 +1,16 @@
+{
+  "name": "node-books",
+  "version": "1.0.0",
+  "description": "This is node api with angularjs project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "abin Hasan\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[3~h",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.3"
+  }
+}
