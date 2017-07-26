@@ -4,9 +4,21 @@
         .module('app')
         .controller('BooksController', BooksController);
 
-        BooksController.$inject = ['$scope'];
+    BooksController.$inject = ['booksservice'];
 
-    function BooksController(scope) { }
+    function BooksController(booksservice) {
+        var vm = this;
+        vm.books = [];
+
+
+        function getBooks() {
+            return booksservice.getBooks()
+                .then(function (data) {
+                    vm.books = data;
+                    return vm.books;
+                });
+        }
+    }
 
 } ());
 

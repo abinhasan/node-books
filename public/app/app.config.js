@@ -1,5 +1,5 @@
 
-var serviceBase = 'http://localhost:12050/';
+var serviceBase = 'http://localhost:8080/';
 
 //var serviceBase = 'http://technology.somee.com/';
 
