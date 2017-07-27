@@ -10,6 +10,13 @@
         var vm = this;
         vm.books = [];
 
+        activate();
+
+        function activate() {
+            return getBooks().then(function () {
+                //logger.info('Activated Avengers View');
+            });
+        }
 
         function getBooks() {
             return booksservice.getBooks()
