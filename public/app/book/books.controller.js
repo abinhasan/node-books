@@ -13,16 +13,16 @@
         activate();
 
         function activate() {
-            return getBooks().then(function () {
-                //logger.info('Activated Avengers View');
+            return getBooks().then(function (data) {
+                vm.books = data;
             });
         }
 
         function getBooks() {
             return booksservice.getBooks()
                 .then(function (data) {
-                    vm.books = data;
-                    return vm.books;
+                    //vm.books = data;
+                    return data;
                 });
         }
     }

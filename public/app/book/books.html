@@ -2,7 +2,14 @@
 		<div class="clearfix no-gutter">
 			<div id="main-content" class="col-md-9 fix-right">
 				<div class="gutter-7px">
-					<div class="col-sm-4">
+
+						<ul>
+							<li ng-repeat="opt in vm.books">
+								{{ opt.title }}<br>
+								{{opt.description}}
+							</li>
+						</ul>
+					<!-- <div class="col-sm-4">
 						<article>
 							<div class="entry-header">
 								<div class="grid-cat"><a href="#">Lifestyle</a></div>
@@ -151,7 +158,8 @@
 								<a href="single.html">More...</a>
 							</div>
 						</article>
-					</div>
+					</div> -->
+
 				</div>
 			</div>
 			<div id="sidebar" class="col-md-3 fix-left">

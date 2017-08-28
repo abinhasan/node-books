@@ -12,7 +12,8 @@
 				.state('home', {
 					url: '/',
 					templateUrl: 'app/book/books.html',
-					controller: 'BooksController'
+					controller: 'BooksController',
+					controllerAs: 'vm'
 				});
 
 
