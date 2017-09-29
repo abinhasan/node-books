@@ -4,7 +4,7 @@
 				<div class="gutter-7px">
 
 
-					<div class="col-sm-12">
+					<!-- <div class="col-sm-12">
 						<div class="post wrap-vid" ng-repeat="opt in vm.books">
 							<div class="zoom-container">
 								<div class="zoom-caption">
@@ -21,7 +21,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 						<!-- <ul>
 							<li ng-repeat="opt in vm.books">
@@ -29,20 +29,21 @@
 								{{opt.description}}
 							</li>
 						</ul> -->
-					<!-- <div class="col-sm-4">
-						<article>
+						
+					<div class="col-sm-4">
+						<article ng-repeat="opt in vm.books">
 							<div class="entry-header">
 								<div class="grid-cat"><a href="#">Lifestyle</a></div>
-								<h3 class="entry-title"><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2016 / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
+								<h3 class="entry-title"><a href="#">{{ opt.title }}</a></h3>
+								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> {{opt.create_date}} / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
 							</div>
 							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/4.jpg" /></a></div>
 							<div class="entry-content">
-								<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below</p>
+								<p>{{opt.description}}</p>
 								<a href="single.html">More...</a>
 							</div>
 						</article>
-						<article>
+						<!-- <article>
 							<div class="entry-header">
 								<div class="grid-cat"><a href="#">Music</a></a></div>
 								<h3 class="entry-title"><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
@@ -77,7 +78,7 @@
 								<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below</p>
 								<a href="single.html">More...</a>
 							</div>
-						</article>
+						</article> -->
 					</div>
 					<div class="col-sm-4">
 						<article>
@@ -178,7 +179,7 @@
 								<a href="single.html">More...</a>
 							</div>
 						</article>
-					</div> -->
+					</div>
 
 				</div>
 			</div>
