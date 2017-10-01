@@ -2,183 +2,49 @@
 		<div class="clearfix no-gutter">
 			<div id="main-content" class="col-md-9 fix-right">
 				<div class="gutter-7px">
-
-
-					<!-- <div class="col-sm-12">
-						<div class="post wrap-vid" ng-repeat="opt in vm.books">
-							<div class="zoom-container">
-								<div class="zoom-caption">
-									<a href="single.html"></a>
-								</div>
-								<img src="images/23.jpg" />
-							</div>
-							<div class="wrapper">
-								<h5 class="vid-name"><a href="#">{{ opt.title }}</a></h5>
-								<div class="info">
-									<h6>By <a href="#">Kelvin</a></h6>
-									<span><i class="fa fa-calendar"></i>25/3/2016</span> 
-									<span><i class="fa fa-heart"></i>1,200</span>
-								</div>
-							</div>
-						</div>
-					</div> -->
-
-						<!-- <ul>
-							<li ng-repeat="opt in vm.books">
-								{{ opt.title }}<br>
-								{{opt.description}}
-							</li>
-						</ul> -->
-						
+                    <!--ng-repeat="i in [1, 2, 3]"-->
 					<div class="col-sm-4">
-						<article ng-repeat="opt in vm.books">
+						<article ng-repeat="b in vm.books | limitTo : 4 : 0">
 							<div class="entry-header">
 								<div class="grid-cat"><a href="#">Lifestyle</a></div>
-								<h3 class="entry-title"><a href="#">{{ opt.title }}</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> {{opt.create_date}} / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
+								<h3 class="entry-title"><a href="#">{{ b.title }}</a></h3>
+								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> {{b.create_date}} / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
 							</div>
-							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/4.jpg" /></a></div>
+							<div class="post-thumbnail-wrap"><a href="single.html"><img src="{{b.image_url}}" /></a></div>
 							<div class="entry-content">
-								<p>{{opt.description}}</p>
-								<a href="single.html">More...</a>
-							</div>
-						</article>
-						<!-- <article>
-							<div class="entry-header">
-								<div class="grid-cat"><a href="#">Music</a></a></div>
-								<h3 class="entry-title"><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2016 / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
-							</div>
-							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/6.jpg" /></a></div>
-							<div class="entry-content">
-								<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below</p>
-								<a href="single.html">More...</a>
-							</div>
-						</article>
-						<article>
-							<div class="entry-header">
-								<div class="grid-cat"><a href="#">Events</a></div>
-								<h3 class="entry-title"><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2016 / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
-							</div>
-							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/11.jpg" /></a></div>
-							<div class="entry-content">
-								<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below</p>
-								<a href="single.html">More...</a>
-							</div>
-						</article>
-						<article>
-							<div class="entry-header">
-								<div class="grid-cat"><a href="#">Lifestyle</a>,<a href="#"> Music</a></div>
-								<h3 class="entry-title"><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2016 / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
-							</div>
-							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/13.jpg" /></a></div>
-							<div class="entry-content">
-								<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below</p>
-								<a href="single.html">More...</a>
-							</div>
-						</article> -->
-					</div>
-					<div class="col-sm-4">
-						<article>
-							<div class="entry-header">
-								<div class="grid-cat"><a href="#">Events</a></div>
-								<h3 class="entry-title"><a href="#">Your Tread Must be Light and Sure as Though Your Path...</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2016 / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
-							</div>
-							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/7.jpg" /></a></div>
-							<div class="entry-content">
-								<p>There once was a story about a man who could turn invisible. I thought it was only a story… until it happened to me. Ok, so here’s how it works: there’s this stuff called</p>
-								<a href="single.html">More...</a>
-							</div>
-						</article>
-						<article>
-							<div class="entry-header">
-								<div class="grid-cat"><a href="#">Events</a>,<a href="#"> Music</a></div>
-								<h3 class="entry-title"><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2016 / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
-							</div>
-							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/10.jpg" /></a></div>
-							<div class="entry-content">
-								<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below</p>
-								<a href="single.html">More...</a>
-							</div>
-						</article>
-						<article>
-							<div class="entry-header">
-								<div class="grid-cat"><a href="#">Lifestyle</a>,<a href="#"> Music</a></div>
-								<h3 class="entry-title"><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2016 / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
-							</div>
-							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/8.jpg" /></a></div>
-							<div class="entry-content">
-								<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below</p>
-								<a href="single.html">More...</a>
-							</div>
-						</article>
-						<article>
-							<div class="entry-header">
-								<div class="grid-cat"><a href="#"> Music</a></div>
-								<h3 class="entry-title"><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2016 / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
-							</div>
-							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/14.jpg" /></a></div>
-							<div class="entry-content">
-								<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below</p>
+								<!--<p>{{b.description}}</p>-->
 								<a href="single.html">More...</a>
 							</div>
 						</article>
 					</div>
 					<div class="col-sm-4">
-						<article>
-							<div class="entry-header">
-								<div class="grid-cat"><a href="#">Lifestyle</a>,<a href="#"> Music</a></div>
-								<h3 class="entry-title"><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2016 / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
-							</div>
-							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/5.jpg" /></a></div>
-							<div class="entry-content">
-								<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below</p>
-								<a href="single.html">More...</a>
-							</div>
-						</article>
-						<article>
-							<div class="entry-header">
-								<div class="grid-cat"><a href="#">Lifestyle</a>,<a href="#"> Events</a></div>
-								<h3 class="entry-title"><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2016 / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
-							</div>
-							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/9.jpg" /></a></div>
-							<div class="entry-content">
-								<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below</p>
-								<a href="single.html">More...</a>
-							</div>
-						</article>
-						<article>
-							<div class="entry-header">
-								<div class="grid-cat"><a href="#">Lifestyle</a></div>
-								<h3 class="entry-title"><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2016 / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
-							</div>
-							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/12.jpg" /></a></div>
-							<div class="entry-content">
-								<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below</p>
-								<a href="single.html">More...</a>
-							</div>
-						</article>
-						<article>
-							<div class="entry-header">
-								<div class="grid-cat"><a href="#">Lifestyle</a></div>
-								<h3 class="entry-title"><a href="#">Marshall, Will, and Holly on a Routine Expedition</a></h3>
-								<span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> 25/3/2016 / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
-							</div>
-							<div class="post-thumbnail-wrap"><a href="single.html"><img src="images/15.jpg" /></a></div>
-							<div class="entry-content">
-								<p>Marshall, Will, and Holly on a routine expedition, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And plunged them down a thousand feet below</p>
-								<a href="single.html">More...</a>
-							</div>
-						</article>
+                        <article ng-repeat="b in vm.books | limitTo : 4 : 4">
+                            <div class="entry-header">
+                                <div class="grid-cat"><a href="#">Lifestyle</a></div>
+                                <h3 class="entry-title"><a href="#">{{ b.title }}</a></h3>
+                                <span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> {{b.create_date}} / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
+                            </div>
+                            <div class="post-thumbnail-wrap"><a href="single.html"><img src="{{b.image_url}}" /></a></div>
+                            <div class="entry-content">
+                                <!--<p>{{b.description}}</p>-->
+                                <a href="single.html">More...</a>
+                            </div>
+                        </article>
+					</div>
+
+					<div class="col-sm-4">
+                        <article ng-repeat="b in vm.books | limitTo : 4 : 8">
+                            <div class="entry-header">
+                                <div class="grid-cat"><a href="#">Lifestyle</a></div>
+                                <h3 class="entry-title"><a href="#">{{ b.title }}</a></h3>
+                                <span><i class="fa fa-heart"></i> 1,200 / <i class="fa fa-calendar"></i> {{b.create_date}} / <i class="fa fa-comment-o"></i> 10 / <i class="fa fa-eye"></i> 945</span>
+                            </div>
+                            <div class="post-thumbnail-wrap"><a href="single.html"><img src="{{b.image_url}}" /></a></div>
+                            <div class="entry-content">
+                                <!--<p>{{b.description}}</p>-->
+                                <a href="single.html">More...</a>
+                            </div>
+                        </article>
 					</div>
 
 				</div>
