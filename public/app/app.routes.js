@@ -8,13 +8,28 @@
 			$urlMatcherFactoryProvider.caseInsensitive(true);
 			$urlRouterProvider.otherwise('/');
 
+
 			$stateProvider
 				.state('home', {
-					url: '/',
-					templateUrl: 'app/book/books.html',
-					controller: 'BooksController',
-					controllerAs: 'vm'
+				    url: '/',
+				    templateUrl: 'app/book/books.html',
+				    controller: 'BooksController',
+				    controllerAs: 'vm'
+
 				});
+
+			//$stateProvider
+			//	.state('home', {
+			//	    views: {
+			//	        'body': {
+			//	            url: '/',
+			//	            templateUrl: 'app/book/books.html',
+			//	            controller: 'BooksController',
+			//	            controllerAs: 'vm'
+			//	        }
+
+			//	    }
+			//	});
 
 
 		});
