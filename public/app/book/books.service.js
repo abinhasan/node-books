@@ -12,7 +12,8 @@
         var serviceBase = ngAuthSettings.apiServiceBaseUri;
 
         return {
-            getBooks: getBooks
+            getBooks: getBooks,
+            getCategories: getCategories
         };
 
         function getBooks() {
@@ -25,6 +26,20 @@
             }
 
             function getBooksFailed(error) {
+                //logger.error('XHR Failed for getAvengers.' + error.data);
+            }
+        };
+
+        function getCategories() {
+            return $http.get(serviceBase + 'api/genres')
+                .then(getCategoriesComplete)
+                .catch(getCategoriesFailed);
+
+            function getCategoriesComplete(response) {
+                return response.data;
+            }
+
+            function getCategoriesFailed(error) {
                 //logger.error('XHR Failed for getAvengers.' + error.data);
             }
         };

@@ -9,10 +9,18 @@
     function BooksController(booksservice) {
         var vm = this;
         vm.books = [];
+        vm.categories = [];
 
-        activate();
+        activateBooks();
+        activateCategories();
 
-        function activate() {
+        function activateCategories() {
+            return getCategories().then(function (data) {
+                vm.categories = data;
+            });
+        }
+
+        function activateBooks() {
             return getBooks().then(function (data) {
                 vm.books = data;
             });
@@ -22,6 +30,13 @@
             return booksservice.getBooks()
                 .then(function (data) {
                     //vm.books = data;
+                    return data;
+                });
+        }
+
+        function getCategories() {
+            return booksservice.getCategories()
+                .then(function (data) {
                     return data;
                 });
         }

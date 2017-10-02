@@ -14,7 +14,7 @@
 				    url: '/',
 				    templateUrl: 'app/book/books.html',
 				    controller: 'BooksController',
-				    controllerAs: 'vm'
+				    controllerAs: 'BooksCtr'
 
 				});
 

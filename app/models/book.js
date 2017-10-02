@@ -23,6 +23,10 @@ var bookSchema = mongoose.Schema({
 		type: String,
 		require: true
 	},
+	file_size: {
+		type: String,
+		require: true
+	},
 	image_url: {
 		type: String,
 		require: true
@@ -42,7 +46,7 @@ var Book = module.exports = mongoose.model('Book', bookSchema);
 // Get Books
 
 module.exports.getBooks = function(callback, limit) {
-	Book.find(callback).limit(16);
+	Book.find(callback).sort({"_id": -1}).limit(16);
 };
 
 // Get Book
@@ -68,6 +72,7 @@ module.exports.updateBook = function(id, book, option, callback) {
 		description: book.description,
 		author: book.author,
 		pages: book.pages,
+		file_size: book.file_size,
 		image_url: book.image_url,
 		download_link: book.download_link
 	};

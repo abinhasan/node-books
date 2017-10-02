@@ -4,7 +4,7 @@
 				<div class="gutter-7px">
                     <!--ng-repeat="i in [1, 2, 3]"-->
 					<div class="col-sm-3">
-						<article ng-repeat="b in vm.books | limitTo : 4 : 0">
+						<article ng-repeat="b in BooksCtr.books | limitTo : 4 : 0">
 							<div class="entry-header">
 								<h3 class="entry-title"><a href="#">{{ b.title }}</a></h3>
 							</div>
@@ -16,7 +16,7 @@
 					</div>
 
 					<div class="col-sm-3">
-                        <article ng-repeat="b in vm.books | limitTo : 4 : 4">
+                        <article ng-repeat="b in BooksCtr.books | limitTo : 4 : 4">
                             <div class="entry-header">
                                 <h3 class="entry-title"><a href="#">{{ b.title }}</a></h3>
                             </div>
@@ -28,7 +28,7 @@
 					</div>
 
 					<div class="col-sm-3">
-                        <article ng-repeat="b in vm.books | limitTo : 4 : 8">
+                        <article ng-repeat="b in BooksCtr.books | limitTo : 4 : 8">
                             <div class="entry-header">
                                 <h3 class="entry-title"><a href="#">{{ b.title }}</a></h3>
                             </div>
@@ -40,7 +40,7 @@
 					</div>
 
 					<div class="col-sm-3">
-                        <article ng-repeat="b in vm.books | limitTo : 4 : 12">
+                        <article ng-repeat="b in BooksCtr.books | limitTo : 4 : 12">
                             <div class="entry-header">
                                 <h3 class="entry-title"><a href="#">{{ b.title }}</a></h3>
                             </div>
@@ -69,13 +69,13 @@
 				<div class="widget wid-comment">
 					<div class="heading"><h4>Categories</h4></div>
 					<div class="content">
-						<div class="post">
+						<div class="post" ng-repeat="c in BooksCtr.categories">
 							<i class="fa fa-arrow-right"></i>
 							<div class="wrapper">
-								<a href="#"><h5>Web Development</h5></a>
+								<a href="#"><h5>{{c.name}}</h5></a>
 							</div>
 						</div>
-						<div class="post">
+						<!-- <div class="post">
 							<i class="fa fa-arrow-right"></i>
 							<div class="wrapper">
 								<a href="#"><h5>Database</h5></a>
@@ -92,7 +92,7 @@
 							<div class="wrapper">
 								<a href="#"><h5>Java</h5></a>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
