@@ -3,7 +3,7 @@
     
     //var serviceBase = 'http://localhost:8080/';
 
-    var serviceBase = 'https://csebooks.herokuapp.com';
+    var serviceBase = 'https://csebooks.herokuapp.com/';
 
     angular
         .module('app')
